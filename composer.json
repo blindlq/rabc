@@ -1,0 +1,36 @@
+{
+    "name": "junhai/rabc",
+    "description": "an rabc package",
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Blind lq",
+            "email": "906314530@qq.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/commands"
+        ],
+        "psr-4": {
+            "Junhai\\Rabc\\": "src/Rabc/"
+        }
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Junhai\\Rabc\\RabcServiceProvider"
+            ],
+            "aliases":{
+                "Rabc": "Junhai\\Rabc\\RabcFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
